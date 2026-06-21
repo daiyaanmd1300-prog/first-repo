@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad | NLP & AI Enthusiast</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --text-color: #0f172a;
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --accent: #f59e0b;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header / Hero Section */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            color: white;
+            border-radius: 24px;
+            margin-top: 20px;
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .location-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Section Layout */
+        section {
+            margin-top: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-color);
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 40px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Tags / Badges */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .tag {
+            background: #eef2ff;
+            color: var(--primary-dark);
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .tag.lang {
+            background: #fffbeb;
+            color: #b45309;
+        }
+
+        /* Fun Section Custom Styling */
+        .hobby-list {
+            list-style: none;
+        }
+
+        .hobby-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hobby-list li:last-child {
+            border-bottom: none;
+        }
+
+        .emoji {
+            font-size: 1.3rem;
+        }
+
+        /* Contact Button */
+        .btn-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.02);
+        }
+
+        /* Interactive Easter Egg */
+        .fun-fact-box {
+            background: #faf5ff;
+            border: 1px solid #e9d5ff;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .fun-fact-box:hover {
+            background: #f3e8ff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header>
+            <h1>Hi, I'm Mohammad 👋</h1>
+            <p class="subtitle">Master's Student in Natural Language Processing & Budding AI Developer</p>
+            <div class="location-badge">📍 Trier, Germany</div>
+        </header>
+
+        <!-- About / Education Section -->
+        <section>
+            <h2>What I Do</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3><span class="emoji">🎓</span> Education</h3>
+                    <p>Currently navigating my way through my <strong>Master’s degree in NLP</strong> at the University of Trier, diving deep into how computational systems understand human speech and text.</p>
+                </div>
+                <div class="card">
+                    <h3><span class="emoji">💻</span> Tech & Code</h3>
+                    <p>Building clean, functional code focused on Artificial Intelligence and Software Engineering. Currently strengthening my foundations daily.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">spaCy</span>
+                        <span class="tag">OOP</span>
+                        <span class="tag">DSA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Projects Focus -->
+        <section>
+            <h2>Current Focus</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3><span class="emoji">🚀</span> Engineering Goals</h3>
+                    <p>Prepping intensely for upcoming tech roles and software engineering internships. Solving algorithmic puzzles and diving into data structures to build solid, scalable codebases.</p>
+                    <div class="tags">
+                        <span class="tag">NeetCode 150</span>
+                        <span class="tag">Problem Solving</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span class="emoji">🗣️</span> Languages</h3>
+                    <p>Expanding my linguistic horizons! Alongside training machine learning language models, I'm upgrading my own human language stack.</p>
+                    <div class="tags">
+                        <span class="tag lang">German (A1.2 Level)</span>
+                        <span class="tag lang">English</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun / Personal Interst Section -->
+        <section>
+            <h2>Beyond the Code</h2>
+            <div class="card">
+                <p style="margin-bottom: 15px;">When I'm not writing Python scripts or optimizing NLP pipelines, you can usually find me recharging with a few of my favorite things:</p>
+                <ul class="hobby-list">
+                    <li><span class="emoji">🎮</span> <strong>Gaming:</strong> Unwinding with immersive virtual worlds.</li>
+                    <li><span class="emoji">🎵</span> <strong>Music:</strong> Staying fueled and focused with a steady stream of good tunes.</li>
+                    <li><span class="emoji">🧑‍🍳</span> <strong>Kitchen Experiments:</strong> Testing out new recipes and crisping things to perfection in my trusty mini-convection oven.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Interactive Surprise Box -->
+        <div class="fun-fact-box" id="funFactBox">
+            <p><strong>✨ Click for a quick fun fact! ✨</strong></p>
+            <p id="factText" style="margin-top: 8px; display: none; color: #7c3aed; font-weight: 500;"></p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="btn-container">
+            <a href="mailto:#" class="btn">Let's Connect!</a>
+        </div>
+
+        <footer>
+            <p>© 2026 Mohammad. Crafted with care.</p>
+        </footer>
+    </div>
+
+    <script>
+        const facts = [
+            "I enjoy parsing real-world human grammar just as much as training computer systems to do it!",
+            "I'm a big believer that a good playlist makes code compile faster.",
+            "My mini-convection oven is practically a key part of my development environment at this point."
+        ];
+
+        const box = document.getElementById('funFactBox');
+        const text = document.getElementById('factText');
+
+        box.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            text.innerText = facts[randomIndex];
+            text.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
